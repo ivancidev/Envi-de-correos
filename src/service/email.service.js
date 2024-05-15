@@ -7,11 +7,22 @@ async function sendEmail(data) {
   try {
     let emailOption = {
       from: emailConfig.auth.user,
-      to: data.email ? data.email : data.emails ? data.emails.join(",") : "",
       subject: data.subject,
       text: data.text,
-      html: data.template === "helloworld" ? `<b>${data.text}</b>` : data.template,
+      html:
+        data.template === "helloworld" ? `<b>${data.text}</b>` : data.template,
     };
+
+    if (data.email) {
+      emailOption.to = data.email;
+    } else if (data.emails) {
+      emailOption.to = data.emails.join(",");
+    } else {
+      throw new Error(
+        "No se proporcionó ninguna dirección de correo electrónico."
+      );
+    }
+
     let info = await transporter.sendMail(emailOption);
     console.log("Correo electronico enviado: ", info);
     return { succes: true, messageId: info.messageId };
@@ -22,5 +33,5 @@ async function sendEmail(data) {
 }
 
 module.exports = {
-    sendEmail
-}
+  sendEmail,
+};

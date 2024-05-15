@@ -1,7 +1,8 @@
 const { sendEmail } = require('../src/service/email.service');
 
 const data = {
-    email: 'herlanherbas@gmail.com',
+    email: '',
+    emails: ['soydevop@gmail.com', 'herlanherbas@gmail.com'],
     subject: 'Hello ✔',
     text: 'Hello Worl?',
     template: 'helloworld'
