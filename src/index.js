@@ -1,4 +1,4 @@
-const { sendEmail } = require('../src/services/email.service');
+const { sendEmail } = require('../src/service/email.service');
 
 const data = {
     email: 'herlanherbas@gmail.com',
