@@ -4,7 +4,7 @@ const data = {
     email: '',
     emails: ['soydevop@gmail.com', 'herlanherbas@gmail.com'],
     subject: 'Hello ✔',
-    text: 'Hello Worl?',
+    text: 'Hello World?',
     template: 'helloworld'
 };
 
