@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title emplate Email para validación OTP
+  body(style="font-family: Arial, sans-serif; background-color: #f4f4f4; margin: 0; padding: 0; display: flex; flex-direction: column; align-items: center; min-height: 100vh; background: url('cid:unique@background.image.cid') no-repeat center center; background-size: cover;")
+    .container(
+      style="background-color: rgba(255, 255, 255, 0.9); padding: 30px; border-radius: 10px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); text-align: center; max-width: 400px; border: 1px solid #ddd; margin: 20px auto;"
+    )
+      h1(style="color: #000;") Your OTP
+      b(style="font-size: 14px; color: #000;") Hey #{nombre}
+      p(style="font-size: 14px; color: #000;") Thank you for choosing Archisketch Company. Use the following PTO to complete the procedure to change your email address.
+      p(style="font-size: 14px; color: #000;") OTP is valid for #{valorTiempo} #{unidadTiempo}. Do not share this code with others including Archisketch employees 
+      p(style="font-size: 24px; font-weight: bold; margin: 30px 0; letter-spacing: 10px; color: red;") #{codigoOTP}
+      p(style="font-size: 14px; margin-top: 200px;color: #000;") Addres 540, City State
+      footer(style="color: #000; font-size: 13px; font-weight: bold;") Copyright © 2024 Archisketch Company. All rights reserved.
